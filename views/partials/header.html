@@ -11,8 +11,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li {% if active=="home" %}class="active"{% endif %}><a href="#">Home</a></li>
+                <li {% if active=="about" %}class="active"{% endif %}><a href="#">About</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Themes<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -24,7 +24,7 @@
                         <li><a href="#">Portfolio two</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact" data-toggle="modal">Contact</a></li>
+                <li {% if active=="contact" %}class="active"{% endif %}><a href="#contact" data-toggle="modal">Contact</a></li>
             </ul>
         </div>
     </div>

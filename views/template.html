@@ -1,21 +1,19 @@
+<!--this is the most basic template which can be extended by every page, just like the java object,it is the ancestor.-->
+<!--required params: title -->
+<!--required blocks: private-css/content/private-js -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Gordon Rawe's Bootstrap Template</title>
-	    {% include 'basic-css.html' %}
-	    {% block custom-css %}{% endblock %}
+	    <title>{{title}}</title>
+	    {% include 'partials/basic-css.html' %}
+	    {% block private-css %}{% endblock %}
 	</head>
 	<body>
-	{% include 'header.html' %}
-
-	{% include 'content.html' %}
-
-	{% include 'footer.html' %}
-
-	{% include 'modal.html' %}	
+	{% block content %}{% endblock %}
 	</body>
-	{% include 'basic-js.html' %}
+	{% include 'partials/basic-js.html' %}
+	{% block private-js %}{% endblock %}
 </html>

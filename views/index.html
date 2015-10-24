@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{title}}</title>
-</head>
-<body>
-	<p>{{content}}</p>
-</body>
-</html>
+{% extends 'template.html' %}
+
+{% block private-css %}
+    <link rel="stylesheet" href="css/custom.css"/>
+{% endblock %}
+
+{% block content %}
+    {% include 'partials/header.html' %}
+    {% include 'partials/footer.html' %}
+{% endblock %}
+
+{% block private-js %}
+
+{% endblock %}
